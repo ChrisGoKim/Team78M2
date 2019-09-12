@@ -1,11 +1,12 @@
 package edu.gatech.oad.antlab.person;
+import java.lang.Math;
 
 /**
  *  A simple class for person 2
  *  returns their name and a
  *  modified string 
  *
- * @author Bob
+ * @author Faris
  * @version 1.1
  */
 public class Person2 {
@@ -31,6 +32,11 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
+		int inputLength = input.len();
+		String randomLengthNumber = "";
+		for i  inputLength {
+
+		}
 	  return null;
 	}
 	/**
