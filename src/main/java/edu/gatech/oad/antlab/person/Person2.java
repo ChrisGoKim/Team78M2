@@ -1,5 +1,6 @@
 package edu.gatech.oad.antlab.person;
-import java.lang.Math;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *  A simple class for person 2
@@ -20,6 +21,7 @@ public class Person2 {
 	 public Person2(String pname) {
 	   name = pname;
 	 }
+
 	/**
 	 * This method should take the string
 	 * input and return its characters in
@@ -30,12 +32,18 @@ public class Person2 {
 	 * @param input the string to be modified
 	 * @return the modified string
 	 */
-	private String calc(String input) {
+	private static String calc(String input) {
 	  //Person 2 put your implementation here
-		int inputLength = input.len();
-		String randomLengthNumber = "";
-		for i  inputLength {
-
+		String output = new String("");
+		List<Character> characters = new ArrayList<Character>(input.length());
+		for(char c:input.toCharArray()) {
+			characters.add(c);
+		}
+		while(output.length() != input.length()) {
+			int indexInCharacters = (int)(Math.random() * characters.size());
+			output += characters.get(indexInCharacters);
+			characters.remove(indexInCharacters);
+			//System.out.println(output);
 		}
 	  return null;
 	}
